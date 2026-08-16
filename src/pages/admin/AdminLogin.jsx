@@ -31,7 +31,7 @@ export default function AdminLogin() {
         </Link>
         <form onSubmit={submit} className="rounded-2xl border border-ink-800 bg-ink-900 p-6 shadow-2xl">
           <h1 className="font-display text-lg font-bold text-white">Staff sign in</h1>
-          <p className="mt-1 text-xs text-ink-400">Role-based access via Supabase Auth. Staff & admin only.</p>
+          <p className="mt-1 text-xs text-ink-400">Staff & admin only.</p>
           {!isLive && (
             <p className="mt-3 rounded-xl border border-brand-400/30 bg-brand-400/10 p-3 text-xs text-brand-300">
               Demo mode — sign in with <b>admin@dionzmotors.co.ke</b> / <b>demo1234</b>
