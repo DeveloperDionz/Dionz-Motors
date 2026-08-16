@@ -26,15 +26,15 @@ export default function Footer() {
           <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">Visit Us</h3>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> Magadi Road, Ongata Rongai, Kajiado County</li>
-            <li className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> +254 712 000 900</li>
+            <li className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> +254 759 261 763</li>
             <li className="flex gap-2.5"><IconMail className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> sales@dionzmotors.co.ke</li>
           </ul>
         </div>
         <div>
           <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">Opening Hours</h3>
           <ul className="mt-4 space-y-2.5 text-sm text-ink-400">
-            <li className="flex justify-between gap-4"><span>Mon – Fri</span><span className="text-ink-200">8:00 – 18:00</span></li>
-            <li className="flex justify-between gap-4"><span>Saturday</span><span className="text-ink-200">9:00 – 17:00</span></li>
+            <li className="flex justify-between gap-4"><span>Mon - Fri</span><span className="text-ink-200">8:00 - 18:00</span></li>
+            <li className="flex justify-between gap-4"><span>Saturday</span><span className="text-ink-200">9:00 - 17:00</span></li>
             <li className="flex justify-between gap-4"><span>Sunday</span><span className="text-ink-200">By appointment</span></li>
           </ul>
         </div>

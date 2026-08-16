@@ -18,8 +18,8 @@ export default function Contact() {
         <div className="mt-10 grid gap-8 lg:grid-cols-5">
           <div className="space-y-4 lg:col-span-2">
             {[
-              { icon: IconWhatsApp, title: 'WhatsApp', line1: '+254 712 000 900', line2: 'Fastest — replies in minutes', href: waLink('Hi Dionz Motors!'), cta: 'Chat now' },
-              { icon: IconPhone, title: 'Phone', line1: '+254 712 000 900', line2: 'Mon–Sat, 8am–6pm', href: 'tel:+254712000900', cta: 'Call' },
+              { icon: IconWhatsApp, title: 'WhatsApp', line1: '+254 759 261 763', line2: 'Fastest — replies in minutes', href: waLink('Hi Dionz Motors!'), cta: 'Chat now' },
+              { icon: IconPhone, title: 'Phone', line1: '+254 759 261 763', line2: 'Mon-Sat, 8am-6pm', href: 'tel:+254759261763', cta: 'Call' },
               { icon: IconMail, title: 'Email', line1: 'sales@dionzmotors.co.ke', line2: 'Replies within a few hours', href: 'mailto:sales@dionzmotors.co.ke', cta: 'Email' },
               { icon: IconPin, title: 'Visit the yard', line1: 'Magadi Road, Ongata Rongai', line2: 'Kajiado County, Kenya', href: 'https://maps.google.com/?q=Ongata+Rongai+Magadi+Road', cta: 'Directions' },
             ].map((c, i) => (

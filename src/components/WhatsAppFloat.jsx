@@ -11,7 +11,7 @@ export default function WhatsAppFloat() {
           <div className="flex items-start justify-between">
             <div>
               <p className="font-display text-sm font-bold">Chat with Dionz Motors</p>
-              <p className="mt-1 text-xs text-ink-500 dark:text-ink-400">Typically replies within minutes, 8am–8pm EAT.</p>
+              <p className="mt-1 text-xs text-ink-500 dark:text-ink-400">Typically replies within minutes, 8am-8pm EAT.</p>
             </div>
             <button onClick={() => setOpen(false)} aria-label="Close chat" className="text-ink-400 hover:text-ink-600 dark:hover:text-ink-200"><IconX className="h-4 w-4" /></button>
           </div>

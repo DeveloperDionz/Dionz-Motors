@@ -16,6 +16,9 @@ export default function Navbar({ dark, toggleDark }) {
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
 
+  // Check if we are currently on the home page
+  const isHome = location.pathname === '/'
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
     onScroll()
@@ -25,18 +28,23 @@ export default function Navbar({ dark, toggleDark }) {
 
   useEffect(() => { setOpen(false) }, [location.pathname])
 
+  // Transparent Header at the very top of the Home page
+  const isTransparent = isHome && !scrolled
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/85 shadow-lg shadow-ink-900/5 backdrop-blur-md dark:bg-ink-950/85'
-          : 'bg-transparent'
+        isTransparent
+          ? 'bg-transparent'
+          : 'bg-white/85 shadow-lg shadow-ink-900/5 backdrop-blur-md dark:bg-ink-950/85'
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between md:h-[4.5rem]" aria-label="Main">
         <Link to="/" className="flex items-center gap-2.5">
-        <img src="/images/yardlogo.png" alt="Dionz Motors Logo" className="h-9 w-9 rounded-xl object-cover" />
-          <span className="font-display text-lg font-bold tracking-tight dark:text-white">
+          <img src="/images/yardlogo.png" alt="Dionz Motors Logo" className="h-12 w-15 rounded-xl object-cover" />
+          <span className={`font-display text-lg font-bold tracking-tight transition-colors ${
+            isTransparent ? 'text-white' : 'text-ink-900 dark:text-white'
+          }`}>
             Dionz<span className="text-brand-500 dark:text-brand-400">Motors</span>
           </span>
         </Link>
@@ -49,8 +57,10 @@ export default function Navbar({ dark, toggleDark }) {
                 className={({ isActive }) =>
                   `rounded-lg px-3.5 py-2 text-sm font-medium transition ${
                     isActive
-                      ? 'text-brand-600 dark:text-brand-400'
-                      : 'text-ink-600 hover:text-ink-900 dark:text-ink-300 dark:hover:text-white'
+                      ? 'text-brand-500 dark:text-brand-400'
+                      : isTransparent
+                      ? 'text-white/90 hover:text-white dark:text-white dark:hover:text-white'
+                      : 'text-ink-600 hover:text-ink-900 dark:text-white dark:hover:text-white'
                   }`
                 }
               >
@@ -64,13 +74,21 @@ export default function Navbar({ dark, toggleDark }) {
           <button
             onClick={toggleDark}
             aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="grid h-10 w-10 place-items-center rounded-xl border border-ink-200 text-ink-600 transition hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-300"
+            className={`grid h-10 w-10 place-items-center rounded-xl border transition ${
+              isTransparent
+                ? 'border-white/30 text-white hover:border-white hover:text-brand-400 dark:border-ink-700 dark:text-ink-300'
+                : 'border-ink-200 text-ink-600 hover:border-brand-400 hover:text-brand-500 dark:border-ink-700 dark:text-ink-300'
+            }`}
           >
             {dark ? <IconSun /> : <IconMoon />}
           </button>
           <Link to="/inventory" className="btn-primary hidden !py-2.5 sm:inline-flex">Browse Cars</Link>
           <button
-            className="grid h-10 w-10 place-items-center rounded-xl border border-ink-200 text-ink-700 md:hidden dark:border-ink-700 dark:text-ink-200"
+            className={`grid h-10 w-10 place-items-center rounded-xl border md:hidden transition ${
+              isTransparent
+                ? 'border-white/30 text-white dark:border-ink-700 dark:text-ink-200'
+                : 'border-ink-200 text-ink-700 dark:border-ink-700 dark:text-ink-200'
+            }`}
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
             aria-expanded={open}

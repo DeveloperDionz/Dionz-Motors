@@ -6,5 +6,5 @@ export const fmtNum = (n) => new Intl.NumberFormat('en-KE').format(n)
 export const fmtDate = (d) =>
   new Date(d).toLocaleDateString('en-KE', { day: 'numeric', month: 'short', year: 'numeric' })
 
-export const WHATSAPP = '254712000900'
+export const WHATSAPP = '254759261763'
 export const waLink = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`
