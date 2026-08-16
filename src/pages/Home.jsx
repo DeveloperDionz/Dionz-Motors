@@ -37,7 +37,8 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950">
-        <img src="/images/hero.jpg" alt="Luxury SUV in the Dionz Motors showroom" className="absolute inset-0 h-full w-full object-cover opacity-60" />
+        {/*<img src="/images/hero.jpg" alt="Luxury SUV in the Dionz Motors showroom" className="absolute inset-0 h-full w-full object-cover opacity-60" />*/}
+        <video src="/images/hero.mp4" autoPlay loop muted playsInline poster="/images/hero.jpg" className="absolute inset-0 h-full w-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40" />
         <div className="container-x relative pt-24 pb-16">

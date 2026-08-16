@@ -35,8 +35,8 @@ export default function Navbar({ dark, toggleDark }) {
     >
       <nav className="container-x flex h-16 items-center justify-between md:h-[4.5rem]" aria-label="Main">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-ink-900 font-display text-lg font-bold text-brand-400 dark:bg-brand-400 dark:text-ink-950">D</span>
-          <span className="font-display text-lg font-bold tracking-tight text-ink-900 dark:text-white">
+        <img src="/images/yardlogo.png" alt="Dionz Motors Logo" className="h-9 w-9 rounded-xl object-cover" />
+          <span className="font-display text-lg font-bold tracking-tight dark:text-white">
             Dionz<span className="text-brand-500 dark:text-brand-400">Motors</span>
           </span>
         </Link>
